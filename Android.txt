@@ -1,4 +1,23 @@
+ANDROID
+**********************************************
+ADB - ANDROID DEBUG BRIDGE
+**********************************************
+PORT 5555
+**********************************************
+FIND SECRET CODE FROM ANDROID DEVICVE WITH IP
+***********************************************
 nmap ip -sV -p 5555    (Scan for adb port)
-adb connect IP:5555    (Connect adb with parrot)
-adb shell              (Access mobile device on parrot)
-pwd --> ls --> cd sdcard --> ls --> cat secret.txt (If you can't find it there then go to Downloads folder using: cd downloads)
+
+# connect to android device
+
+  adb connect IP:5555    (Connect adb with parrot)
+  adb shell              (Access mobile device on parrot)
+  pwd --> ls --> cd sdcard --> ls --> 
+
+# to show the file secret.txt
+  cat secret.txt 
+
+#(If can't find it there then go to Downloads folder using: cd downloads)
+cd D
+cd ..
+cd download
