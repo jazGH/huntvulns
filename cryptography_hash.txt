@@ -1,0 +1,42 @@
+hash calculator  (Hash)
+************************************
+
+Example:-
+File with name xyz.txt, generate md5 hash or sh1 hash
+
+1. Open Hash calculator
+2. Righty side of Data, click that 3 .
+3. Select the file
+4. Click on calculate
+
+---------------------
+Got HASH
+----------------------
+
+**************************************
+Vera Crypt
+**************************************
+
+# vera crypt can be used to create encrypted volume (containers)
+# encrypted volumes can't be opened direct, it has to be mounted
+# create a drive to mount that encrypted olfer, while creating select file (select encrypted foldeR)
+# after that click mount
+# new local disk will be there in my computer
+# dismount will remove the local disk
+
+Question:
+
+There is a file  inside a Encrypted Drive or Folder, find a secret code inside that file
+
+# Open vera crypt
+# create a volume (choose any ununsed label K, L, M like that)
+# select a file
+# select encrypted folder
+# hit mount
+# will ask for password, enter it
+# will mount it
+# new drive will be there 
+# open 
+# open file 
+# Finished
+
